@@ -164,3 +164,6 @@ if st.button("Calcular Pensión") and st.session_state.calculate_button_visible:
 
         # Ocultar el botón después del cálculo
         st.session_state.calculate_button_visible = False
+
+        # Hacer scroll automático hacia los resultados
+        st.markdown("<script>window.scrollTo(0, document.body.scrollHeight);</script>", unsafe_allow_html=True)
