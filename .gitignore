@@ -1,0 +1,11 @@
+# Ignorar entorno virtual
+env/
+
+# Ignorar archivos pycache
+__pycache__/
+
+# Archivos de configuración del editor
+.vscode/
+
+# Otros archivos que no se deberían subir
+*.pyc
