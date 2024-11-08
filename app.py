@@ -148,7 +148,7 @@ if st.button("Calcular Pensión y ver resultados abajo ⬇⬇"):
         result_col1, result_col2 = st.columns(2)
         with result_col1:
             st.markdown(f"<h2 style='color:red;'>Pensión mensual bruta estimada: {pension_mensual_bruta:.2f} €</h2>", unsafe_allow_html=True)
-            st.metric("Pensión mensual deflactada ó valor a día de la jubilación", f"{valor_deflactado:.2f} €")
+            st.metric("Pensión deflactada ó valor a día de la jubilación", f"{valor_deflactado:.2f} €")
         with result_col2:
             st.metric("Días cotizados totales", f"{dias_totales_cotizados:,}")
             st.metric("Base reguladora mensual", f"{base_reguladora:.2f} €")
