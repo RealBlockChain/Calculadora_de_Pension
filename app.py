@@ -15,7 +15,7 @@ st.markdown("""
     .stButton button {
         background-color: #FF5722;  /* Color naranja-rojizo */
         color: white;
-        font-size: 18px;
+        font-size: 20px;
         padding: 10px;
         border-radius: 8px;
     }
@@ -24,7 +24,7 @@ st.markdown("""
         color: #333333;
     }
     label, .stRadio, .stNumberInput, .stTextInput {
-        font-size: 16px;
+        font-size: 18px;
         color: #333333;
     }
     .stNumberInput input {
@@ -71,8 +71,6 @@ col_edad, col_tipo_cotizacion, col_cotizacion_valor = st.columns(3)
 
 with col_edad:
     edad_actual = st.number_input("Edad actual (18-67):", min_value=18, max_value=67, step=1, value=st.session_state.edad_actual, key="edad_actual")
-    if edad_actual is not None and (edad_actual < 18 or edad_actual > 67):
-        st.error("Por favor, introduzca una edad comprendida entre 18 y 67 años.")
 
 with col_tipo_cotizacion:
     tipo_cotizacion = st.radio("Cotización en:", ["Años", "Días"], key="tipo_cotizacion")
@@ -80,13 +78,9 @@ with col_tipo_cotizacion:
 with col_cotizacion_valor:
     if tipo_cotizacion == "Años":
         anios_cotizados = st.number_input("Años cotizados (máx. 51):", min_value=0, max_value=51, step=1, value=st.session_state.anios_cotizados, key="anios_cotizados")
-        if anios_cotizados is not None and anios_cotizados > 51:
-            st.error("Por favor, introduzca un máximo de 51 años cotizados.")
         dias_cotizados = anios_cotizados * 365 if anios_cotizados is not None else 0
     else:
         dias_cotizados = st.number_input("Días cotizados (máx. 18615):", min_value=0, max_value=18615, step=1, value=st.session_state.dias_cotizados, key="dias_cotizados", format="%d")
-        if dias_cotizados is not None and dias_cotizados > 18615:
-            st.error("Por favor, introduzca un máximo de 18615 días cotizados.")
 
 # Campos de fecha de nacimiento
 st.markdown("#### Introduzca su fecha de nacimiento:")
@@ -113,7 +107,6 @@ if fecha_nacimiento:
     fecha_67 = date(fecha_nacimiento.year + 67, fecha_nacimiento.month, fecha_nacimiento.day)
     dias_hasta_67 = (fecha_67 - date.today()).days if fecha_67 > date.today() else 0
 
-# Asegurarse de que dias_cotizados tenga un valor numérico
 dias_cotizados = dias_cotizados or 0
 dias_totales_cotizados = dias_cotizados + dias_hasta_67
 
@@ -130,8 +123,7 @@ with col_base_valor:
         base_reguladora = sueldo_bruto_anual / 12 if sueldo_bruto_anual else 0.0
 
 # Cálculo de la pensión mensual bruta y deflactada
-st.session_state.calculate_button_visible = True
-if st.button("Calcular Pensión") and st.session_state.calculate_button_visible:
+if st.button("Calcular Pensión y ver resultados abajo ⬇⬇"):
     if not fecha_nacimiento:
         st.error("Por favor, introduzca una fecha de nacimiento válida.")
     elif base_reguladora == 0:
@@ -141,7 +133,7 @@ if st.button("Calcular Pensión") and st.session_state.calculate_button_visible:
     else:
         # Calcula porcentaje en función de los días totales cotizados
         anios_totales = dias_totales_cotizados / 365.0
-        porcentaje_base = 0.5  # Base inicial de 50% para 15 años
+        porcentaje_base = 0.5
         if anios_totales > 15:
             meses_adicionales = int((anios_totales - 15) * 12)
             porcentaje_base += meses_adicionales * 0.0019
@@ -156,14 +148,8 @@ if st.button("Calcular Pensión") and st.session_state.calculate_button_visible:
         result_col1, result_col2 = st.columns(2)
         with result_col1:
             st.markdown(f"<h2 style='color:red;'>Pensión mensual bruta estimada: {pension_mensual_bruta:.2f} €</h2>", unsafe_allow_html=True)
-            st.metric("Pensión mensual deflactada", f"{valor_deflactado:.2f} €")
+            st.metric("Pensión mensual deflactada ó valor a día de la jubilación", f"{valor_deflactado:.2f} €")
         with result_col2:
             st.metric("Días cotizados totales", f"{dias_totales_cotizados:,}")
             st.metric("Base reguladora mensual", f"{base_reguladora:.2f} €")
             st.metric("Porcentaje aplicado", f"{porcentaje_base * 100:.2f}%")
-
-        # Ocultar el botón después del cálculo
-        st.session_state.calculate_button_visible = False
-
-        # Hacer scroll automático hacia los resultados
-        st.markdown("<script>window.scrollTo(0, document.body.scrollHeight);</script>", unsafe_allow_html=True)
