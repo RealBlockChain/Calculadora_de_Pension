@@ -4,6 +4,16 @@ from datetime import date
 # Configuración de la página
 st.set_page_config(page_title="Calculadora de Pensión de Jubilación", page_icon="💼")
 
+# Ocultar menú de hamburguesa y footer de Streamlit
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
 # Estilos personalizados
 st.markdown("""
     <style>
