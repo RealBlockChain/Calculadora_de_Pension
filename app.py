@@ -154,35 +154,46 @@ hide_streamlit_elements = """
 """
 st.markdown(hide_streamlit_elements, unsafe_allow_html=True)
 
-# Estilos personalizados
 st.markdown("""
     <style>
     .block-container {
         background-color: #FFF8E1;
-        padding: 25px;
+        padding: 15px; /* Reduci el padding */
         border-radius: 10px;
+        width: 90%; /* Ajusta el ancho al 90% en móviles */
+        margin: 0 auto; /* Centra horizontalmente */
     }
     .stButton button {
         background-color: #FF5722;
         color: white;
-        font-size: 20px;
-        padding: 10px;
+        font-size: 18px; /* Reduce el tamaño de fuente */
+        padding: 8px 16px; /* Reduce el padding */
         border-radius: 8px;
+        width: 100%; /* Ocupa todo el ancho disponible */
     }
     h1 {
-        font-weight: bold;
+        font-size: 1.8em; /* Reduce el tamaño de fuente del título */
         color: #333333;
     }
     label, .stRadio, .stNumberInput, .stTextInput {
-        font-size: 18px;
+        font-size: 16px; /* Reduce el tamaño de fuente de los controles */
         color: #333333;
     }
     .stNumberInput input {
         font-size: 14px;
-        width: 100%;
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+    @media (min-width: 768px) { /* Estilos para pantallas más grandes */
+        .block-container {
+            width: 80%; /* Aumenta el ancho al 80% en pantallas más grandes */
+        }
+        .stButton button {
+            width: auto; /* Vuelve al ancho automático en pantallas más grandes */
+        }
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 # Banner publicitario al inicio
 st.markdown(
