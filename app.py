@@ -16,7 +16,6 @@ st.set_page_config(
 # Agregar metadatos SEO mejorados
 st.components.v1.html("""
     <meta name="description" content="Simulador de jubilación gratuito ✓ Calculadora de pensión actualizada 2025 ✓ Simulador de pensión oficial ✓ Resultados instantáneos y precisos.">
-    <meta name="google-site-verification" content="vh0xOyBf33q-mM9aFPx_iM6sNcjOjRiLMxUa_vEev6g" />
     <meta name="keywords" content="simulador de jubilación, calculadora de pensión de jubilación, calculadora de pensión, simulador de pensión, simulador de pensión de jubilación, pensión jubilación, cálculo pensión">
     <meta name="robots" content="index, follow">
     <meta name="author" content="José Maria Muñiz">
@@ -123,14 +122,15 @@ st.components.v1.html("""
     }
     </script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=TU_ID_DE_GOOGLE_ANALYTICS"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'TU_ID_DE_GOOGLE_ANALYTICS');
-    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P07CZVS8WQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P07CZVS8WQ');
+</script>
 """, height=0)
 
 # CSS para ocultar el menú, el footer y el botón flotante de "Hosted with Streamlit"
