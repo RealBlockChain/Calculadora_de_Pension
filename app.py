@@ -16,6 +16,7 @@ st.set_page_config(
 # Agregar metadatos SEO mejorados
 st.components.v1.html("""
     <meta name="description" content="Simulador de jubilación gratuito ✓ Calculadora de pensión actualizada 2025 ✓ Simulador de pensión oficial ✓ Resultados instantáneos y precisos.">
+    <meta name="google-site-verification" content="vh0xOyBf33q-mM9aFPx_iM6sNcjOjRiLMxUa_vEev6g" />
     <meta name="keywords" content="simulador de jubilación, calculadora de pensión de jubilación, calculadora de pensión, simulador de pensión, simulador de pensión de jubilación, pensión jubilación, cálculo pensión">
     <meta name="robots" content="index, follow">
     <meta name="author" content="José Maria Muñiz">
@@ -23,7 +24,7 @@ st.components.v1.html("""
     <meta property="og:title" content="Simulador de Jubilación | Calculadora de Pensión 2025">
     <meta property="og:description" content="Use nuestro simulador de jubilación y calculadora de pensión de jubilación para planificar su futuro.">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="TU_URL_AQUI"/>
+    <link rel="canonical" href="https://calculadora-de-pension.streamlit.app/"/>
     
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
@@ -49,7 +50,7 @@ st.components.v1.html("""
       "provider": {
         "@type": "Organization",
         "name": "José Maria Muñiz",
-        "sameAs": "TU_URL_AQUI"
+        "sameAs": "https://calculadora-de-pension.streamlit.app/"
       },
       "about": {
         "@type": "Thing",
@@ -58,12 +59,12 @@ st.components.v1.html("""
       },
       "potentialAction": {
         "@type": "UseAction",
-        "target": "TU_URL_AQUI"
+        "target": "https://calculadora-de-pension.streamlit.app/"
       },
       "softwareHelp": {
         "@type": "CreativeWork",
         "name": "Guía de uso del simulador",
-        "text": "Introduzca sus datos personales, años ó días cotizados y base regulador ó sueldo bruto anuala para calcular su pensión estimada"
+        "text": "Introduzca sus datos personales, años ó días cotizados y base reguladora ó sueldo bruto anuala para calcular su pensión estimada"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -84,17 +85,17 @@ st.components.v1.html("""
         "@type": "ListItem",
         "position": 1,
         "name": "Inicio",
-        "item": "TU_URL_AQUI"
+        "item": "https://calculadora-de-pension.streamlit.app/"
       },{
         "@type": "ListItem",
         "position": 2,
-        "name": "Calculadoras",
-        "item": "TU_URL_AQUI/calculadoras"
+        "name": "Calculadora",
+        "item": "https://calculadora-de-pension.streamlit.app/calculadora"
       },{
         "@type": "ListItem",
         "position": 3,
         "name": "Simulador de Pensión de Jubilación",
-        "item": "TU_URL_AQUI/calculadora/pension-jubilacion"
+        "item": "https://calculadora-de-pension.streamlit.app/calculadora/pension-jubilacion"
       }]
     }
     </script>
