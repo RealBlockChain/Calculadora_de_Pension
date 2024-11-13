@@ -63,7 +63,7 @@ st.components.v1.html("""
       "softwareHelp": {
         "@type": "CreativeWork",
         "name": "Guía de uso del simulador",
-        "text": "Introduzca sus datos personales, años ó días cotizados y base reguladora ó sueldo bruto anuala para calcular su pensión estimada"
+        "text": "Introduzca sus datos personales, años ó días cotizados y base reguladora ó sueldo bruto anual para calcular su pensión estimada"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -218,7 +218,7 @@ st.markdown("""
 # Header y text optimizados para SEO
 st.markdown("""
     <h1 style='font-size: 2em; font-weight: bold;'>Simulador de Jubilación - Calculadora de Pensión de Jubilación 2025</h1>
-    <p style='font-size: 1.2em; margin-bottom: 20px;'>Utilice nuestro simulador de jubilación gratuito, para calcular su pensión estimada y futura deflactada, de forma fácil y precisa. Resultados instantáneos.</p>
+    <p style='font-size: 1.2em; margin-bottom: 18px;'>Utilice nuestro simulador de jubilación, para calcular su pensión estimada y futura deflactada, de forma fácil y precisa. Resultados instantáneos.</p>
     <p class="last-updated">Última actualización: Noviembre 2024</p>
 """, unsafe_allow_html=True)
 
