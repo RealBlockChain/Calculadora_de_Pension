@@ -8,7 +8,7 @@ start_time = time.time()
 
 # Configuración de la página
 st.set_page_config(
-    page_title="Simulador de Pensión de Jubilación | Calculadora de Pensión 2024",
+    page_title="Simulador de Pensión de Jubilación | Calculadora de Pensión 2025",
     page_icon="💼",
     initial_sidebar_state="collapsed"
 )
@@ -201,7 +201,7 @@ st.markdown(
     """
     <div style="text-align: center;">
         <a href="https://swiy.co/descargar-guia-gratis" target="_blank">
-            <img src="https://toolyu.com/image/Nuevo_Banner_Negro_728x180.webp" alt="10 Estrategias Clave para Mejorar Su pensión de Jubilación" style="width:100%; height:auto;">
+            <img src="https://toolyu.com/image/Nuevo_Banner_Negro_728x180.webp" alt="10 Estrategias Claves para Mejorar Su pensión de Jubilación" style="width:100%; height:auto;">
         </a>
     </div>
     """,
