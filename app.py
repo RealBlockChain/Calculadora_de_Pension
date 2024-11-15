@@ -37,7 +37,7 @@ st.components.v1.html("""
       "@type": "WebApplication",
       "name": "Simulador de Jubilación",
       "description": "Calculadora gratuita para simular su pensión de jubilación",
-      "url": "TU_URL_AQUI",
+      "url": "https://calculadora-de-pension.streamlit.app",
       "applicationCategory": "FinancialCalculator",
       "operatingSystem": "All",
       "offers": {
@@ -118,9 +118,91 @@ st.components.v1.html("""
           "@type": "Answer",
           "text": "La base reguladora es el promedio de las bases de cotización de los últimos años de su vida laboral, que se utiliza para calcular su pensión."
         }
-      }]
+      },{
+        "@type": "Question",
+        "name": "¿Cómo se calcula el porcentaje de la pensión?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "El porcentaje depende de los años cotizados. Se necesitan 15 años mínimo para el 50% de la base reguladora. Cada mes adicional suma un porcentaje hasta llegar al 100%."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Cuál es la pensión máxima en 2025?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "La pensión máxima está establecida en 3.175,04 euros mensuales (14 pagas anuales). Este límite se actualiza cada año según el IPC."
+        }
+      },{
+        "@type": "Question",
+        "name": "¿Qué es la pensión deflactada?",
+        "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "La pensión deflactada es el valor real estimado que tendrá su pensión cuando se jubile, teniendo en cuenta la pérdida de poder adquisitivo por la inflación."
+        }
+     }]
     }
     </script>
+
+    <!-- Article Schema adicional -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Calculadora de Pensión de Jubilación 2025: Simule su pensión gratis",
+  "description": "Utilice nuestro simulador de pensión gratuito y actualizado para calcular su pensión de jubilación estimada en 2025. Resultados instantáneos y precisos.",
+  "datePublished": "2024-03-15",
+  "dateModified": "2024-03-15",
+  "author": {
+    "@type": "Person",
+    "name": "José Maria Muñiz"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Simulador de Pensiones",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://calculadora-de-pension.streamlit.app/"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://calculadora-de-pension.streamlit.app/"
+  }
+}
+</script>
+
+    <!-- HowTo Schema adicional -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo calcular su pensión de jubilación",
+  "description": "Guía paso a paso para calcular su pensión de jubilación estimada",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Introduzca edad actual",
+      "text": "Ingrese su edad actual entre 18 y 67 años"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Años cotizados",
+      "text": "Indique sus años o días cotizados hasta la fecha"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Base reguladora",
+      "text": "Introduzca su base reguladora mensual o sueldo bruto anual"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Calcular resultado",
+      "text": "Pulse el botón calcular para obtener su pensión estimada"
+    }
+  ],
+  "totalTime": "PT2M"
+}
+</script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P07CZVS8WQ"></script>
@@ -159,7 +241,7 @@ st.markdown("""
     <style>
     .block-container {
         background-color: #FFF8E1;
-        padding: 15px; /* Reduci el padding */
+        padding: 10px; /* Reduci el padding */
         border-radius: 10px;
         width: 90%; /* Ajusta el ancho al 90% en móviles */
         margin: 0 auto; /* Centra horizontalmente */
@@ -167,7 +249,7 @@ st.markdown("""
     .stButton button {
         background-color: #FF5722;
         color: white;
-        font-size: 18px; /* Reduce el tamaño de fuente */
+        font-size: 22px; /* Reduce el tamaño de fuente */
         padding: 8px 16px; /* Reduce el padding */
         border-radius: 8px;
         width: 100%; /* Ocupa todo el ancho disponible */
@@ -195,6 +277,12 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# Header y text optimizados para SEO
+st.markdown("""
+    <h1 style='font-size: 2em; font-weight: bold;'>Simulador de Jubilación - Calculadora de Pensión de Jubilación 2025</h1>
+    <p style='font-size: 1.2em; margin-bottom: 18px;'>Utilice nuestro simulador de jubilación, para calcular su pensión estimada y futura deflactada, de forma fácil y precisa. Resultados instantáneos.</p>
+    <p class="last-updated">Última actualización: Noviembre 2024</p>
+""", unsafe_allow_html=True)
 
 # Banner publicitario al inicio
 st.markdown(
@@ -213,13 +301,6 @@ st.markdown("""
     <div class="breadcrumbs">
         Inicio > Calculadora > Simulador de Pensión de Jubilación
     </div>
-""", unsafe_allow_html=True)
-
-# Header y text optimizados para SEO
-st.markdown("""
-    <h1 style='font-size: 2em; font-weight: bold;'>Simulador de Jubilación - Calculadora de Pensión de Jubilación 2025</h1>
-    <p style='font-size: 1.2em; margin-bottom: 18px;'>Utilice nuestro simulador de jubilación, para calcular su pensión estimada y futura deflactada, de forma fácil y precisa. Resultados instantáneos.</p>
-    <p class="last-updated">Última actualización: Noviembre 2024</p>
 """, unsafe_allow_html=True)
 
 # Entradas de datos
@@ -306,7 +387,7 @@ if st.button("Calcular Pensión y ver resultados abajo ⬇⬇"):
             """
             <div style="text-align: center; margin-top: 20px;">
                 <a href="https://swiy.co/descargar-guia-gratis" target="_blank">
-                    <img src="https://toolyu.com/image/Nuevo_Banner_Negro_728x180.webp" alt="10 Estrategias Clave para Mejorar Su pensión de Jubilación" style="width:100%; height:auto;">
+                    <img src="https://toolyu.com/image/Nuevo_Banner_Negro_728x180.webp" alt="10 Estrategias Claves para Mejorar Su pensión de Jubilación" style="width:100%; height:auto;">
                 </a>
             </div>
             """,
