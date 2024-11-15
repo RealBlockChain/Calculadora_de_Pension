@@ -243,7 +243,7 @@ st.markdown("""
         background-color: #FFF8E1;
         padding: 10px; /* Reduci el padding */
         border-radius: 10px;
-        width: 90%; /* Ajusta el ancho al 90% en móviles */
+        width: 100%; /* Ajusta el ancho al 90% en móviles */
         margin: 0 auto; /* Centra horizontalmente */
     }
     .stButton button {
@@ -289,7 +289,7 @@ st.markdown(
     """
     <div style="text-align: center;">
         <a href="https://swiy.co/descargar-guia-gratis" target="_blank">
-            <img src="https://toolyu.com/image/Nuevo_Banner_Negro_728x180.webp" alt="10 Estrategias Claves para Mejorar Su pensión de Jubilación" style="width:100%; height:auto;">
+            <img src="https://toolyu.com/image/Nuevo_Banner_Negro_728x180_1.webp" alt="10 Estrategias Claves para Mejorar Su pensión de Jubilación" style="width:100%; height:auto;">
         </a>
     </div>
     """,
@@ -387,7 +387,7 @@ if st.button("Calcular Pensión y ver resultados abajo ⬇⬇"):
             """
             <div style="text-align: center; margin-top: 20px;">
                 <a href="https://swiy.co/descargar-guia-gratis" target="_blank">
-                    <img src="https://toolyu.com/image/Nuevo_Banner_Negro_728x180.webp" alt="10 Estrategias Claves para Mejorar Su pensión de Jubilación" style="width:100%; height:auto;">
+                    <img src="https://toolyu.com/image/Nuevo_Banner_Negro_728x180_1.webp" alt="10 Estrategias Claves para Mejorar Su pensión de Jubilación" style="width:100%; height:auto;">
                 </a>
             </div>
             """,
