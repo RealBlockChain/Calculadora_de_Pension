@@ -241,9 +241,9 @@ st.markdown("""
     <style>
     .block-container {
         background-color: #FFF8E1;
-        padding: 10px; /* Reduci el padding */
+        padding: 3px; /* Reduci el padding */
         border-radius: 10px;
-        width: 100%; /* Ajusta el ancho al 90% en móviles */
+        width: 100%; /* Ajusta el ancho al 100% en móviles */
         margin: 0 auto; /* Centra horizontalmente */
     }
     .stButton button {
