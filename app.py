@@ -279,8 +279,8 @@ st.markdown("""
 
 # Header y text optimizados para SEO
 st.markdown("""
-    <h1 style='font-size: 2em; font-weight: bold;'>Calculadora de Pensión de Jubilación 2025</h1>
-    <p style='font-size: 1em; margin-bottom: 18px;'>Utilice nuestro simulador de jubilación, para calcular su pensión estimada y futura deflactada.</p>
+    <h1 style='font-size: 2em; font-weight: bold;'>Simulador de Jubilación</h1>
+    <p style='font-size: 1em; margin-bottom: 18px;'>Utilice nuestra calculadora de pensión de jubilación y conozca su pensión estimada y futura deflactada.</p>
     <p class="last-updated">Última actualización: Noviembre 2024</p>
 """, unsafe_allow_html=True)
 
